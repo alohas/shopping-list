@@ -9,14 +9,18 @@
   </head>
   <body>
     <article class="sheet">
+      <h1>My shopping-list</h1>
       <ul class="listings"></ul>
     </article>
 
     <template>
-      <input type="checkbox" name="item" />
-      <h3 class="name"></h3>
-      <h3 class="qantity"></h3>
+      <li class="item">
+        <input class="bought" type="checkbox" name="item" />
+        <h3 class="name"></h3>
+        <h3 class="quantity"></h3>
+      </li>
     </template>
+
     <script src="script.js"></script>
   </body>
 </html>

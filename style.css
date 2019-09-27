@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+}
+
+article {
+  padding: 15px;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
