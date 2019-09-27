@@ -10,4 +10,27 @@ ul {
 }
 li {
   list-style: none;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "item quantity";
+}
+.name-wrap {
+  grid-area: item;
+}
+input.bought {
+  display: inline-block;
+}
+h3.name {
+  display: inline-block;
+}
+h3.quantity {
+  grid-area: quantity;
+}
+
+li * {
+  margin: 0;
+}
+h3.item_bought {
+  text-decoration: line-through;
 }
