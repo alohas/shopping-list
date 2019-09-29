@@ -1,7 +1,14 @@
+.hide {
+  display: none;
+}
+
 h1 {
   text-align: center;
 }
-
+#button-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 article {
   padding: 15px;
 }
@@ -9,6 +16,8 @@ ul {
   padding: 0;
 }
 li {
+  margin: 15px 0;
+  cursor: pointer;
   list-style: none;
   display: grid;
   grid-template-columns: 4fr 1fr;
@@ -18,14 +27,18 @@ li {
 .name-wrap {
   grid-area: item;
 }
-input.bought {
+input.bought:disabled {
   display: inline-block;
+  visibility: hidden;
+  display: none;
 }
 h3.name {
   display: inline-block;
+  transition: 1s;
 }
 h3.quantity {
   grid-area: quantity;
+  justify-self: end;
 }
 
 li * {
@@ -33,4 +46,25 @@ li * {
 }
 h3.item_bought {
   text-decoration: line-through;
+}
+
+.bg-modal {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-content {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 10% 10%;
+  padding: 1em 2em;
+  padding-top: 2em;
+  position: relative;
+  background-color: white;
 }

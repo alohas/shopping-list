@@ -9,18 +9,55 @@
   </head>
   <body>
     <article class="sheet">
-      <h1>My shopping-list</h1>
+      <header>
+        <h1>My shopping-list</h1>
+        <div id="button-menu">
+          <button class="addBTN">Add an item</button>
+          <button class="removeBTN">Remove an item</button>
+        </div>
+      </header>
       <ul class="listings"></ul>
     </article>
 
-    <template>
+    <div class="bg-modal hide">
+      <article class="modal-content">
+        <button id="close">X</button>
+        <div class="modal-parent"></div>
+      </article>
+    </div>
+
+    <template class="listing">
       <li class="item">
         <div class="name-wrap">
-          <input class="bought" type="checkbox" name="item" />
+          <input class="bought" type="checkbox" name="item" disabled />
           <h3 class="name"></h3>
         </div>
         <h3 class="quantity"></h3>
       </li>
+    </template>
+
+    <template class="form">
+      <form>
+        <h2>Add an item to the list</h2>
+        <div>
+          <label for="item_name">Name of item:</label><br />
+          <input type="text" id="item_name" name="item_name" required />
+        </div>
+        <div>
+          <label for="item_name">Quantity:</label><br />
+          <input type="text" id="quantity" name="quantity" required />
+        </div>
+        <div>
+          <label for="item_name">Quantity prefix:</label><br />
+          <input
+            type="text"
+            id="quantity_prefix"
+            name="quantity_prefix"
+            required
+          />
+        </div>
+        <input name="submit" type="submit" value="Add to the list" />
+      </form>
     </template>
 
     <script src="script.js"></script>
