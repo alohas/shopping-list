@@ -15,7 +15,7 @@ article {
 ul {
   padding: 0;
 }
-li {
+li.item {
   margin: 15px 0;
   cursor: pointer;
   list-style: none;
@@ -67,4 +67,20 @@ h3.item_bought {
   padding-top: 2em;
   position: relative;
   background-color: white;
+}
+
+#close {
+  border: none;
+  color: white;
+  background-color: darkred;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
 }

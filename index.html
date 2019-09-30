@@ -13,7 +13,7 @@
         <h1>My shopping-list</h1>
         <div id="button-menu">
           <button class="addBTN">Add an item</button>
-          <button class="removeBTN">Remove an item</button>
+          <button class="editBTN">Edit an item</button>
         </div>
       </header>
       <ul class="listings"></ul>
@@ -56,10 +56,22 @@
             required
           />
         </div>
+        <input name="id" type="hidden" />
         <input name="submit" type="submit" value="Add to the list" />
       </form>
     </template>
 
+    <template class="editor">
+      <ul class="list-menu"></ul>
+    </template>
+
+    <template class="itemForEdit">
+      <li class="listingInEdit">
+        <h5 class="editor-name"></h5>
+        <button class="edit">Edit</button>
+        <button class="delete">Delete</button>
+      </li>
+    </template>
     <script src="script.js"></script>
   </body>
 </html>
