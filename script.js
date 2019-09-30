@@ -43,9 +43,11 @@ function display(items) {
     if (item.bought) {
       clone.querySelector(".bought").checked = true;
       clone.querySelector("h3.name").classList.add("item_bought");
+      clone.querySelector("h3.quantity").classList.add("item_bought");
     } else {
       clone.querySelector(".bought").checked = false;
       clone.querySelector("h3.name").classList.remove("item_bought");
+      clone.querySelector("h3.quantity").classList.remove("item_bought");
     }
 
     clone.querySelector("li").addEventListener("click", () => {
@@ -64,6 +66,10 @@ function itemStatus(id) {
     document
       .querySelector(`li[data-itemid="${id}"] > div > h3.name`)
       .classList.remove("item_bought");
+    document
+      .querySelector(`li[data-itemid="${id}"] > h3.quantity`)
+      .classList.remove("item_bought");
+
     document.querySelector(
       `li[data-itemid="${id}"] > div > input`
     ).checked = false;
@@ -72,6 +78,10 @@ function itemStatus(id) {
     document
       .querySelector(`li[data-itemid="${id}"] > div > h3.name`)
       .classList.add("item_bought");
+    document
+      .querySelector(`li[data-itemid="${id}"] > h3.quantity`)
+      .classList.add("item_bought");
+
     document.querySelector(
       `li[data-itemid="${id}"] > div > input`
     ).checked = true;

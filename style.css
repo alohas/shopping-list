@@ -1,16 +1,135 @@
+@import url("https://use.typekit.net/kgs7lub.css");
+
 .hide {
   display: none;
 }
+html {
+  background-color: #005723;
+  background-image: url("https://www.transparenttextures.com/patterns/pool-table.png");
+}
 
 h1 {
+  margin: 20px 0;
   text-align: center;
+  font-family: sauna-new, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 12vw;
 }
+
+h2 {
+  font-family: sauna-new, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  font-size: 9vw;
+  margin-top: 0;
+  margin-top: 0;
+}
+
+h3.name,
+h3.quantity {
+  transition: 0.7s;
+  font-family: sarina, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 6vw;
+}
+
+button {
+  font-family: bureau-grot-wide, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  height: auto;
+  width: 31vw;
+  padding: 10px 5px;
+  border-radius: 8px;
+  font-size: 4vw;
+  background-color: #fba301;
+  border: solid 3px;
+}
+
+input[type="submit"] {
+  font-family: bureau-grot-wide, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding: 10px 5px;
+  border-radius: 8px;
+  font-size: 4vw;
+  background-color: #fba301;
+  border: solid 2px;
+  margin: 15px 0;
+}
+
+label {
+  font-family: bc-alphapipe, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+input[type="text"] {
+  font-family: bc-alphapipe, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+form > div {
+  margin: 15px 0;
+}
+
+li.listingInEdit {
+  margin: 0;
+  margin-bottom: 10px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 2.5fr 1.1fr 1.1fr;
+  grid-gap: 5px;
+  grid-template-areas: "naming edit delete";
+  align-items: center;
+}
+
+button.edit {
+  grid-area: edit;
+  background-color: #09ab4a;
+}
+button.delete {
+  grid-area: delete;
+  background-color: #d20404;
+}
+h5 {
+  grid-area: naming;
+  transition: 0.7s;
+  font-family: sarina, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4vw;
+}
+
+button.edit,
+button.delete {
+  font-size: 3vw;
+  padding: 7px 3px;
+  width: auto;
+}
+
 #button-menu {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-article {
+.addBTN {
+  margin: 0 auto;
+}
+
+.editBTN {
+  margin: 0 auto;
+}
+article.sheet {
   padding: 15px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/double-lined.png");
+  margin: 2em;
+  box-shadow: 5px 5px 5px 3px black;
 }
 ul {
   padding: 0;
@@ -23,6 +142,7 @@ li.item {
   grid-template-columns: 4fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "item quantity";
+  align-items: center;
 }
 .name-wrap {
   grid-area: item;
@@ -34,7 +154,6 @@ input.bought:disabled {
 }
 h3.name {
   display: inline-block;
-  transition: 1s;
 }
 h3.quantity {
   grid-area: quantity;
@@ -44,8 +163,8 @@ h3.quantity {
 li * {
   margin: 0;
 }
-h3.item_bought {
-  text-decoration: line-through;
+.item_bought {
+  text-decoration: line-through red wavy;
 }
 
 .bg-modal {
@@ -60,7 +179,10 @@ h3.item_bought {
 }
 
 .modal-content {
-  max-height: 100%;
+  background-color: #ffffff;
+  background-image: url(https://www.transparenttextures.com/patterns/double-lined.png);
+  overflow-y: auto;
+  max-height: 80%;
   max-width: 100%;
   margin: 10% 10%;
   padding: 1em 2em;
