@@ -12,6 +12,7 @@ document.querySelector("button.addBTN").addEventListener("click", () => {
 
 document.querySelector("button.editBTN").addEventListener("click", () => {
   openModal("edit");
+  document.querySelector("button.editBTN").disabled = true;
 });
 
 document.querySelector("#close").addEventListener("click", closeModal);
@@ -134,6 +135,7 @@ function openModal(ref) {
 
 function closeModal() {
   modal.classList.add("hide");
+  document.querySelector("button.editBTN").disabled = false;
 }
 
 function fixForm() {
@@ -329,6 +331,7 @@ function editInDB(form) {
       //console.log(t);
       updateDom(t);
       modal.classList.add("hide");
+      document.querySelector("button.editBTN").disabled = false;
     });
 }
 

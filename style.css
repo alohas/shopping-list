@@ -210,24 +210,24 @@ li * {
   height: 30px;
   transition: 0.3s;
 }
-#close:hover {
+#close:hover:enabled {
   background-color: #d20404;
 }
-button:hover,
+button:hover:enabled,
 input[type="submit"]:hover {
   background-color: #ffd900;
 }
 
-button:active,
+button:active:enabled,
 input[type="submit"]:active {
   background-color: #bb920b;
 }
 
-button.delete:hover {
+button.delete:hover:enabled {
   background-color: #ff0000;
 }
 
-button.edit:hover {
+button.edit:hover:enabled {
   background-color: #0ae461;
 }
 
